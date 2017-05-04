@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC:400,700");
+/* line 3, ../sass/style.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Amatic SC', serif;
+  font-weight: 700;
+}
+
+/* line 10, ../sass/style.scss */
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  box-sizing: inherit;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* line 16, ../sass/style.scss */
+.wrapper .title {
+  font-size: 72px;
+}
+/* line 19, ../sass/style.scss */
+.wrapper .game {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 22, ../sass/style.scss */
+.wrapper .game .chars_panel {
+  width: 50%;
+  margin: 20px;
+  display: block;
+  float: left;
+}
+/* line 27, ../sass/style.scss */
+.wrapper .game .chars_panel .chars_panel__block {
+  float: left;
+  width: 70px;
+  height: 70px;
+  margin: 5px;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px dotted #ddd;
+}
+/* line 35, ../sass/style.scss */
+.wrapper .game .chars_panel .chars_panel__block .chars_panel__block__char {
+  line-height: 70px;
+  font-size: 36px;
+}
+/* line 39, ../sass/style.scss */
+.wrapper .game .chars_panel .chars_panel__block:hover {
+  cursor: pointer;
+}
+/* line 44, ../sass/style.scss */
+.wrapper .game .hangman_panel {
+  width: 40%;
+  margin: 25px;
+  border-radius: 5px;
+  border: 2px dotted #ddd;
+  display: block;
+  float: left;
+  text-align: center;
+  padding: 10px;
+}
+/* line 54, ../sass/style.scss */
+.wrapper .game .hangman_panel #hangman_panel__status {
+  font-size: 54px;
+  font-weight: 700;
+}
+/* line 62, ../sass/style.scss */
+.wrapper .game #hangman_panel__word {
+  float: left;
+  position: relative;
+  margin: 25px;
+  display: block;
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+/* line 70, ../sass/style.scss */
+.wrapper .game .btn {
+  float: left;
+  position: relative;
+  margin: 25px;
+  display: block;
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+/* line 77, ../sass/style.scss */
+.wrapper .game .btn:focus {
+  outline: 0;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="js/vue.js"></script>
+    <link rel="stylesheet" href="stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+  </head>
+  <body>
+    <div id="app" class="wrapper">
+      <div class="container">
+        <div class="title">Hangman game, created with vue.js</div>
+        <hr>
+        <div class="game">
+          <div  class="hangman_panel" >
+          <div id="hangman_panel__human">
+            <span v-if="counter > 1"><img v-bind:src="'img/'+this.counter+'.png'"></span>
+            <span v-else><img v-bind:src="'img/hang.gif'"></span>
+          </div>
+          <div id="hangman_panel__status">
+            <span v-if="counter > 1 && maskedWord != word">{{status.type}}</span>
+            <span v-else-if="maskedWord == word && counter > 1">{{status.win}}</span>
+            <span v-else>{{status.lose}}</span>
+          </div>
+          </div>
+          <div id="hangman_panel__word">{{maskedWord}}</div>
+          <button class="btn btn-danger" v-on:click="restartGame()">Restart</button>
+          <div class="chars_panel">
+            <div v-for="(c, index) in characters" class="chars_panel__block" v-on:click="checkLetter(index)">
+              <span class="chars_panel__block__char">{{c}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script src="js/index.js"></script>
+  </body>
+</html>
